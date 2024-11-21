@@ -1,7 +1,7 @@
 <?php
 
 function filterLettersAndNumbers(string $input): string {
-    return preg_replace('/[^a-zA-Z0-9]/', '', $input);
+    return preg_replace('/[^a-zA-Z0-9\s]/', '', $input);
 }
 
 function filterWhiteSpacesToUnderscore(string $input): string {
@@ -20,7 +20,7 @@ $parsed_text = strtolower($parsed_text);
 var_dump($parsed_text);
 $parsed_text = filterLettersAndNumbers($parsed_text);
 var_dump($parsed_text);
-$parsed_text = filterWhiteSpacesToUnderscore($parsed_text);
-var_dump($parsed_text);
+//$parsed_text = filterWhiteSpacesToUnderscore($parsed_text);
+//var_dump($parsed_text);
 
 ?>
